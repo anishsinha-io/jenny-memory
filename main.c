@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include <stdlib.h>
 
 int fn() { return 5; }
@@ -11,4 +12,9 @@ int* fn4() {
     return x;
 }
 
-int main() { return 0; }
+int main() {
+    int* res = fn4();
+    printf("%d\n", *res);
+    free(res);
+    return 0;
+}
